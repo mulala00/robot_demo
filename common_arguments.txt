@@ -6,3 +6,4 @@
 --debugfile debug.txt
 --consolewidth 80
 --consolecolors on
+--include Done

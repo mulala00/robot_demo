@@ -1,24 +1,30 @@
-"""Variables example from a .py """
+"""Variables example from a py  file
 
-BLADE_VARS = {
-    'buck':     {'TEST_HW':              'adsp1',
-                 'PRODUCT':              'ui50',
-                 'TEST_SLOT_ID':         4,
-                 'CLA_IP_ADDRESS':       '10.69.10.88'},
-    'westlake': {'TEST_HW':              'adsp1',
-                 'PRODUCT':              'ui50',
-                 'TEST_SLOT_ID':         4,
-                 'CLA_IP_ADDRESS':       '10.69.10.212'},
-    'koff':     {'TEST_HW':              'adsp1',
-                 'PRODUCT':              'ui50',
-                 'TEST_SLOT_ID':         4,
-                 'CLA_IP_ADDRESS':       '10.69.55.5'},
-    'hulk':     {'TEST_HW':              'adsp2',
-                 'PRODUCT':              'ui60',
-                 'TEST_SLOT_ID':         4,
-                 'CLA_IP_ADDRESS':       '10.69.115.108'}
+    Variables define in this file can both using in Robot and Python Library
+
+    In Robot:
+        Library                vars_with_args   buck
+"""
+
+
+REMOTE_HOST = {
+    'hzling09':    {'HOST':              'hzling09.china.nsn-net.net',
+                    'USER':              'xiuzhou',
+                    'PASSWORD':          "I Can't Tell You"},
+
+    'BUCK':        {'HOST':              '10.68.10.88',
+                    'USER':              'root',
+                    'PASSWORD':          "root"}
 }
 
 
-def get_variables(test_hw):
-    return BLADE_VARS[test_hw]
+def get_variables(server_name):
+    """
+    Do Not change This function Name.
+
+    RobotFramework will call 'get_variables' automatically to get variables with arguments
+    :param: server_name
+    :return: The Address of the sever, User and passwords
+    """
+
+    return REMOTE_HOST[server_name]

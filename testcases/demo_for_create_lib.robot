@@ -4,7 +4,7 @@ Documentation          This demo is about how to Extend Lib Using
 # This is same as : Library                MyStaticLib.MyStaticLib   Mulala
 Library                MyStaticLib   Mulala
 Library                MyStaticLib.IHaveToUsingExplict   Leiws
-Library                MyFunctionsLib
+Library                FunctionLibDemo
 
 *** Variables ***
 

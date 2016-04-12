@@ -1,5 +1,5 @@
 from robot.libraries.BuiltIn import BuiltIn
-# from SeleniumLibrary import SeleniumLibrary
+from SeleniumLibrary import SeleniumLibrary
 
 
 class ExtendedSeleniumLibrary(SeleniumLibrary):

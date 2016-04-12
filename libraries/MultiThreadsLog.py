@@ -1,9 +1,8 @@
+# -*- coding: utf-8 -*-
+
 """
-The simplest approach is having a module with methods which map directly to keyword names.
-Keywords also take the same arguments as the methods implementing them. Keywords:
-    report failures with exceptions,
-    log by writing to standard output
-    and can return values using the return statement.
+在robot framework 里， 如果我们使用多线程， 非主线程的打印，异常都无法被Robotframework 所有获取
+如果我们需要获取非主线程的打印， 可以使用BackgroundLogger
 """
 
 from threading import Thread

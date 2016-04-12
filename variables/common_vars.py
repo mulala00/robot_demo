@@ -1,11 +1,10 @@
 """Generic variables."""
-USER = "root"
-PASSWORD = "root"
+USER_NAME = "root"
 REMOTE_HOST = ["locahost", 23]
 
 DICT_DEMO = {
-    "user": USER,
-    "password": PASSWORD
+    "user": USER_NAME,
+    "INFO": "Some Infomation",
 }
 
 
@@ -14,3 +13,5 @@ class JustADemo(object):
         pass
 
 OBJ_DEMO = JustADemo()
+
+_I_AM_NOT_EXIST = "You can't import me"

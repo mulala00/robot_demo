@@ -5,19 +5,15 @@ Default Tags           ExtendLib
 Library                RemoteShell
 Library                MyStaticLib   Zhou
 Resource               ${EXECDIR}/resources/log_resource.robot
-Variables              common_vars.py
-Variables              vars_with_args.py  buck
 Suite Setup            Open Connection Using My ShellLib
 Suite Teardown         Close Connection Using My ShellLib
 Test Setup             Initial Logs Collect
 Test Teardown          Collect Logs When Tear Down
-*** Variables ***
-${HOST}       10.69.10.88
-${USERNAME}   root
-${PASSWORD}   root
-${DEF_DEV}=   0
-${DEF_CORE}=   0
 
+*** Variables ***
+${SACLAR  VAR EXAMPLE}       I am a saclar
+@{LIST VAR EXAMPLE}          127.0.0.1    8270
+&{DICT VAR EXAMPLE}          user=root   password=root
 
 *** Test Cases ***
 Check We Are In CLA-0 Using My Shell Lib
@@ -32,12 +28,6 @@ DSP Should Be Enable
 
 This Demo Need Two Connection
     Dsp Core Should Be Enable  device=${DEF_DEV}   core=${DEF_CORE}
-
-Using Variable From Python
-    Log   ${REMOTE HOST}
-    RemoteShell.Echo Var  ${USER}   ${PASSWORD}   ${REMOTE HOST}  ${DICT_DEMO}  ${OBJ_DEMO}
-    RemoteShell.Echo Var  ${TEST HW}   ${PRODUCT}   ${TEST SLOT ID}  ${CLA IP ADDRESS}
-    RemoteShell.Echo Var  ${TEST_HW}
 
 *** Keywords ***
 Open Connection Using My ShellLib

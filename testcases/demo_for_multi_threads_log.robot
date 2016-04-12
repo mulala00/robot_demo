@@ -1,5 +1,5 @@
 *** Settings ***
-Library    MyMultiThreads
+Library    MultiThreadsLog
 
 *** Test Cases ***
 Start threads separately, log all at the end

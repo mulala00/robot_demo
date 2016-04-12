@@ -1,10 +1,10 @@
 *** Settings ***
-Documentation          This example demonstrates executing commands on a remote machine
-...                    and getting their output and the return code.
+Documentation          This example demonstrates using SSHLibrary to executing commands on a remote machine,
+...                    getting their output and the return code.
 ...
 ...                    Notice how connections are handled as part of the suite setup and
 ...                    teardown. This saves some time when executing several test cases.
-Default Tags           BuiltLib
+Default Tags           StardardLib
 Library                SSHLibrary
 Suite Setup            Open Connection And Log In
 Suite Teardown         Close All Connections
