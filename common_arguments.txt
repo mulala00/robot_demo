@@ -1,0 +1,8 @@
+# Common (static) arguments for pybot
+--pythonpath variables
+--pythonpath libraries:libraries\shell
+--outputdir demo_output
+--loglevel INFO
+--debugfile debug.txt
+--consolewidth 80
+--consolecolors on
