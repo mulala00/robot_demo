@@ -1,15 +1,13 @@
 *** Settings ***
-Library       Remote    http://${ADDRESS}:${PORT}
+Library       MyRemote    http://${ADDRESS}:${PORT}
 Library       Process
+Default Tags           Remote  Done
 #Suite Setup            Start Robot Remote Server
 #Suite Teardown         Stop Robot Remote Server
 
 *** Variables ***
 ${ADDRESS}=    127.0.0.1
-${PORT}       8270
-${name}       lao wang
-@{names}       lao   wang
-&{names}       lao=wang
+${PORT}        8270
 
 *** Test Cases ***
 An Example Case Require Remote Operation
@@ -17,15 +15,13 @@ An Example Case Require Remote Operation
     ${result}=   Start Application On Remote
     Log   ${result}
     Log   We Do Something Else Here Like Configure And Setup Service In BTS
-    ${result}=   Stop Application On Remote
-    Log   ${result}
+    Run Keyword And Ignore Error    Stop Application On Remote
 
 An Example Using Run Keyword Method
     &{result}=   Run Keyword   Start Application On Remote
     Log Many    &{result}
     Log   We Do Something Else Here Like Configure And Setup Service In BTS
-    &{result}=   Run Keyword   Stop Application On Remote
-    Log Many    &{result}
+    Run Keyword And Ignore Error    Stop Application On Remote
 
 
 *** Keywords ***
@@ -38,7 +34,7 @@ Stop Robot Remote Server
    Terminate All Processes
 
 Start Application On Remote
-    Start Applicaiton Here    TM500
+   Start Applicaiton Here    TM500
 
 Stop Application On Remote
-    Remote.stop_application_here    TM500
+   stop_application_here    TM500

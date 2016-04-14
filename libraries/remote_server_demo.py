@@ -10,13 +10,16 @@ class ExampleRemoteLibrary(object):
 
     def start_applicaiton_here(self, name):
         sys.__stdout__.write("Call from Remote Client for start_applicaiton_here\n")
-        # os.system("c:\tm500.ext --opt ")
-        return "Starting: %s" % name
+        print "Call from Remote Client for start_applicaiton_here\n"
+        return True
 
     def stop_application_here(self, name):
         sys.__stdout__.write("Call from Remote Client for stop_application_here\n")
-        return "Stop: %s" % name
+        print "Call from Remote Client for stop_application_here\n"
+        raise Exception("Just for a Test")
+        return True
 
 
 if __name__ == '__main__':
-    RobotRemoteServer(ExampleRemoteLibrary())
+    RobotRemoteServer(ExampleRemoteLibrary(), *sys.argv[1:])
+    sys.exit(0)
