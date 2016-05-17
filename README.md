@@ -19,11 +19,15 @@
 
 ## Note
 1. Download and Install Pycharm as your IDW, [Download](https://www.jetbrains.com/pycharm/download/#section=windows)
-    Configure the plugins for Robot Support: File->setting->Plugins->Install Jetbrain plugin …
+    Configure the plugins for Robot Support: File->setting->Plugins->Install Jetbrain plugin â€¦
 2. Only The Cases Marked with tag Done should be run, Other cases are under develop..
 
 
-
+```
+sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+```
 
 
 
